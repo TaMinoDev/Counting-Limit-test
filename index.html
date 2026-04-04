@@ -17,12 +17,13 @@
         padding: 5px;
       }
     </style>
+    <meta charset="UTF-8">
   </head>
   <body>
     <div class="box">
     <span id="counter">0</span>
     <hr>
-    <input type="number" id="wait" value="1000">
+    <input type="number" id="wait" value="1000"><button onclick="changeSpeed()">Ändern</button>
     </div>
     <script>
       const counter = document.getElementById('counter');
@@ -35,13 +36,13 @@
           counter.innerText = wert;
           wert++;
         }
-      wait.addEventListener('change',(e) => {
+      function changeSpeed(){
         if(wait.value){
             warte = wait.value;
             clearInterval(inter);
             inter = setInterval(main,warte);
         }
-      });
+      }
       
     </script>
   </body>
