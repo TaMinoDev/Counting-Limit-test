@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Counting Test</title>
+  </head>
+  <body>
+    <span id="counter">0</span>
+    <input type="number" id="wait" value="1000">
+    <script>
+      const counter = document.getElementById('counter');
+      const wait = document.getElementById('wait');
+      let wert = 0;
+      let warte = 1000;
+        
+        function main(){
+          counter.innerText = wert;
+          wert++;
+        }
+      wait.addEventListener('input',(e) => {
+        if(wait.value){
+            warte = wait.value;
+            inter = setInterval(main,warte);
+        }
+      });
+      let inter = setInterval(main,warte);
+      );
+    </script>
+  </body>
