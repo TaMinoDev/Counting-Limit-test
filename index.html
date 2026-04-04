@@ -25,6 +25,9 @@
     <span id="counter">0</span>
     <hr>
     <input type="number" id="wait" value="1000"><button onclick="changeSpeed()">Ändern</button>
+    <hr>
+      <button onclick="wait++;">+1</button><button onclick="wait = wait + 10;">+10</button><button onclick="wait = wait + 100;">+100</button>
+      <button onclick="wait = wait + 1000;">+1000</button><button onclick="wait = wait + 10000;">+10000</button><button onclick="wait = wait + 100000;">+100000</button>
     </div>
     <script>
       const counter = document.getElementById('counter');
