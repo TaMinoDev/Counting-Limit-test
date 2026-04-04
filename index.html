@@ -31,18 +31,17 @@
       const wait = document.getElementById('wait');
       let wert = 0;
       let warte = 1000;
-      let inter = inter = setInterval(main,warte);
+      let inter = setInterval(main,warte);
         
         function main(){
           counter.innerText = wert;
           wert++;
         }
       function changeSpeed(){
-        if(wait.value){
             warte = parseInt(wait.value);
             clearInterval(inter);
             inter = setInterval(main,warte);
-        }
+            alert(warte);
       }
       
     </script>
