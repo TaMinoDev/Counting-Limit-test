@@ -20,6 +20,7 @@
     <meta charset="UTF-8">
   </head>
   <body>
+    <h2>Counting Test V5 or something</h2>
     <div class="box">
     <span id="counter">0</span>
     <hr>
@@ -38,7 +39,7 @@
         }
       function changeSpeed(){
         if(wait.value){
-            warte = wait.value;
+            warte = parseInt(wait.value);
             clearInterval(inter);
             inter = setInterval(main,warte);
         }
