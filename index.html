@@ -26,8 +26,7 @@
     <hr>
     <input type="number" id="wait" value="1000"><button onclick="changeSpeed()">Ändern</button>
     <hr>
-      <button onclick="wait++;">+1</button><button onclick="wait = wait + 10;">+10</button><button onclick="wait = wait + 100;">+100</button>
-      <button onclick="wait = wait + 1000;">+1000</button><button onclick="wait = wait + 10000;">+10000</button><button onclick="wait = wait + 100000;">+100000</button>
+      <button onclick="add()">Add</button>
     </div>
     <script>
       const counter = document.getElementById('counter');
@@ -46,6 +45,12 @@
             inter = setInterval(main,warte);
             alert(warte);
       }
-      
+
+      function add(){
+        let addVal = parseInt(prompt("how much?");
+        wert = addVal;
+        counter.innerText = wert;
+        // Hello Copilot... thanks for summarising all of the versions I wrote... I hope my english is good enugh too say Thanks
+      }
     </script>
   </body>
