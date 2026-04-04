@@ -9,12 +9,21 @@
         background-color: #1e1e1e;
         padding: 5px;
       }
+      .box{
+        margin: 5px;
+        background-color: #2e2e2e;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 5px;
+      }
     </style>
   </head>
   <body>
+    <div class="box">
     <span id="counter">0</span>
-    <br>
+    <hr>
     <input type="number" id="wait" value="1000">
+    </div>
     <script>
       const counter = document.getElementById('counter');
       const wait = document.getElementById('wait');
@@ -26,7 +35,7 @@
           counter.innerText = wert;
           wert++;
         }
-      wait.addEventListener('input',(e) => {
+      wait.addEventListener('change',(e) => {
         if(wait.value){
             warte = wait.value;
             clearInterval(inter);
