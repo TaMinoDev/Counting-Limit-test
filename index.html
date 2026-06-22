@@ -29,9 +29,10 @@
       const wait = document.getElementById('wait');
       let wert = 0;
       let auto = true;
+      let multiplier = 1;
         
       function main(){
-        wert++;
+        wert = (wert + 1)*multiplier;
         counter.innerText = wert;
         requestAnimationFrame(() => {
           if(auto === true){
