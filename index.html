@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <h2>Counting Test V12 or something</h2>
+    <h2>Counting Test V14 or something</h2>
     <div class="box">
     <span id="counter">0</span>
     </div>
@@ -36,7 +36,7 @@
         wert = (wert + 1)*multiplier;
         counter.innerText = wert;
         requestAnimationFrame(() => {
-          if(auto === true){
+          if(auto === true && wert !== infinity){
             main();
             log();
           }
