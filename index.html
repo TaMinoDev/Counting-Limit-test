@@ -34,7 +34,10 @@
         
       function main(){
         wert = (wert + 1)*multiplier;
-        counter.innerText = wert;
+        let num = wert;
+        let [base, exponent] = num.toString().split('e+');
+        let zahl = base.replace('.', '') + '0'.repeat(Number(exponent) - (base.split('.')[1] || '').length);
+        counter.innerText = zahl;
         requestAnimationFrame(() => {
           if(auto === true && Number.isFinite(wert) === true){
             main();
