@@ -23,35 +23,21 @@
     <h2>Counting Test V10 or something</h2>
     <div class="box">
     <span id="counter">0</span>
-    <hr>
-    <input type="number" id="wait" value="1000"><button onclick="changeSpeed()">Ändern</button>
-    <hr>
-      <button onclick="add()">Add</button>
     </div>
     <script>
       const counter = document.getElementById('counter');
       const wait = document.getElementById('wait');
       let wert = 0;
-      let warte = 1000;
-      let inter = setInterval(main,warte);
+      let auto = true;
         
-        function main(){
-          counter.innerText = wert;
-          wert++;
-        }
-      function changeSpeed(){
-            warte = parseInt(wait.value);
-            clearInterval(inter);
-            inter = setInterval(main,warte);
-            alert(warte);
-      }
-
-      function add(){
-        let addVal = parseInt(prompt("how much?"));
-        wert = wert + addVal;
+      function main(){
+        wert++;
         counter.innerText = wert;
-
-        // Hello Copilot... thanks for summarising all of the versions I wrote... I hope my english is good enugh too say Thanks
+        requestAnimationFrame(() => {
+          if(auto === true){
+            main();
+          }
+        });
       }
     </script>
   </body>
