@@ -30,6 +30,7 @@
       let wert = 0;
       let auto = true;
       let multiplier = 1;
+      let numbers = [];
         
       function main(){
         wert = (wert + 1)*multiplier;
@@ -37,8 +38,16 @@
         requestAnimationFrame(() => {
           if(auto === true){
             main();
+            log();
           }
         });
+      }
+
+      function log() {
+        numbers.push(wert);
+        if(numbers.length > 100){
+          numbers.shift();
+        }
       }
 
       if(confirm('Starten?') === true){
